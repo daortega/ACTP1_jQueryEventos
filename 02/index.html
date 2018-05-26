@@ -130,5 +130,25 @@
 	<footer class="footer__main">
 		<p class="footer__legal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sint praesentium laboriosam atque placeat architecto, maxime temporibus sequi veniam quae culpa accusantium dignissimos natus perferendis mollitia quam optio incidunt. Esse!</p>
 	</footer>
+
+	<!-- SCRIPT -->
+	<script src="../_assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//1.-Seleccionar el cuarto link del tercer artículo
+			link = $('article').eq(3)
+			$(this).find('div ul li:last-child a').text('Pinterest')
+			$(this).find('div ul li:last-child a').attr("href","http://pinterest.com")
+
+			//2.- Prever el comportamiento del href="#"
+			//$('a[href="#"]').css("color","yellow")
+			$('a[href="#"]').on('click', function(e){
+				e.preventDefault()
+			})
+
+			//3.- Seleccionar h2 hijos de header__main, doble del tamaño (font-size:2em)
+			$('body>header').children('h2').css( "font-size", "2em")
+		})
+	</script>
 </body>
 </html>
