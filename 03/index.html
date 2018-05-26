@@ -11,7 +11,7 @@
 	1. Seleccionar el cuarto li y por medio de un append
 	agrega este string: '<ul><li><a href="#">link 4.a</a></li></ul>'
 		1.a Revisa en el inspector de elementos qué resultado has obtenido
-	2. Por medio de la misma selección anterior inserta por medio de un before
+	2. Por medio de la misma selección anterior inserta, -por medio de- usando un before
 	este otro string: '<li><a href="#">link 3.5</a></li>'
 		2.a Revisa la diferencia entre los métodos append y before, ¿logras notar
 		la diferencia?
@@ -61,5 +61,24 @@
 		</ul>
 	</nav>
 
+	<!-- SCRIPT -->
+	<script src="../_assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			cuarto = $('li:nth-child(4)')
+			sexto = $('li:nth-child(6)')
+
+			//1.- Seleccionar cuarto li
+			 cuarto.css('color','red');
+			 cuarto.append('<ul><li><a href="#">link 4.a</a></li></ul>');
+			 cuarto.before('<li><a href="#">link 3.5</a></li>')
+
+				//2.- Seleccionar sexto li
+				sexto.css('color','yellow');
+				sexto.prepend('😎');
+				sexto.after('');
+		})
+	</script>
 </body>
 </html>
