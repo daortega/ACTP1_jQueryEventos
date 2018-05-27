@@ -112,6 +112,26 @@
     </li>
   </ul>
 
+  <!-- SCRIPT -->
+  <script src="../_assets/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript">
+    $(function(event){
+      $('a').on('click',function(event){
+        //event.stopPropagation();
+        event.preventDefault();
+      })
 
+
+      $(".social__like").on('click',function(){
+        $(this).toggleClass('social__like--clicked');
+      })
+      $(".social__link").on('click',function(){
+        //salir hasta el Li que contiene todo, y buscar el atributo alt de img
+        titulo_img = $(this).parent().parent().parent().children('img').attr('alt')
+        console.log(titulo_img)
+        alert(titulo_img)
+      })
+    })
+  </script>
 </body>
 </html>
